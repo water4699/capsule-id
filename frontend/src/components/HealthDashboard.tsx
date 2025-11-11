@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo } from 'react';
+import { useEffect, useMemo } from 'react';
 import { useAccount } from 'wagmi';
 import { useFhevm } from '../fhevm/useFhevm';
 import { useInMemoryStorage } from '../hooks/useInMemoryStorage';
