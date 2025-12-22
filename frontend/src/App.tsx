@@ -15,9 +15,10 @@ function App() {
       <QueryClientProvider client={queryClient}>
         <RainbowKitProvider locale="en-US">
           <InMemoryStorageProvider>
-            <div className="min-h-screen overflow-x-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex flex-col">
+            <div className="min-h-screen overflow-x-hidden flex flex-col relative">
+              <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-900/20 via-transparent to-transparent pointer-events-none"></div>
               <Header />
-              <main className="container mx-auto px-4 py-8 flex-1">
+              <main className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 flex-1 relative z-10">
                 <HealthDashboard />
               </main>
               <Footer />
