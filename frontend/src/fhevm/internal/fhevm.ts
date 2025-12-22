@@ -23,7 +23,7 @@ function throwFhevmError(
   message?: string,
   cause?: unknown
 ): never {
-  throw new FhevmReactError(code, message, cause ? { cause } : undefined);
+  throw new FhevmReactError(code, message);
 }
 
 const isFhevmInitialized = (): boolean => {
