@@ -11,8 +11,8 @@ import { FhevmInstance, FhevmInstanceConfig } from "../fhevmTypes";
 
 export class FhevmReactError extends Error {
   code: string;
-  constructor(code: string, message?: string, options?: ErrorOptions) {
-    super(message, options);
+  constructor(code: string, message?: string) {
+    super(message);
     this.code = code;
     this.name = "FhevmReactError";
   }
@@ -194,7 +194,7 @@ async function resolve(
   };
 
   // Help Typescript solver here:
-  if (Object.hasOwn(_mockChains, chainId)) {
+  if (chainId in _mockChains) {
     if (!rpcUrl) {
       rpcUrl = _mockChains[chainId];
     }

@@ -9,9 +9,8 @@ import HealthDataDisplay from './HealthDataDisplay';
 import StatsCard from './StatsCard';
 
 export default function HealthDashboard() {
-  const { address, isConnected, chain } = useAccount();
+  const { isConnected, chain } = useAccount();
   const { storage } = useInMemoryStorage();
-  const [mounted, setMounted] = useState(false);
 
   const { ethersSigner } = useWagmiEthers({ 31337: 'http://127.0.0.1:8545' });
 

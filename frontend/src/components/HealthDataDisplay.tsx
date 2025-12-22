@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { getHealthScoreInfo, getHealthScoreClass } from '../utils/healthScore';
+import { getHealthScoreInfo } from '../utils/healthScore';
 import HealthMetricBarCyber from './HealthMetricBarCyber';
 import HealthAdvice from './HealthAdvice';
 import EnergyRing from './EnergyRing';
@@ -16,12 +16,6 @@ export default function HealthDataDisplay({ healthMetrics }: HealthDataDisplayPr
     return new Date(Number(ts) * 1000).toLocaleString();
   };
 
-  const getHealthScoreColor = (score: number) => {
-    if (score <= 500) return 'text-green-400';
-    if (score <= 750) return 'text-yellow-400';
-    if (score <= 1000) return 'text-orange-400';
-    return 'text-red-400';
-  };
 
   // Animate score number
   useEffect(() => {
