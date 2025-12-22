@@ -20,8 +20,7 @@ export class FhevmReactError extends Error {
 
 function throwFhevmError(
   code: string,
-  message?: string,
-  cause?: unknown
+  message?: string
 ): never {
   throw new FhevmReactError(code, message);
 }
