@@ -94,8 +94,7 @@ async function getWeb3Client(rpcUrl: string) {
   } catch (e) {
     throwFhevmError(
       "WEB3_CLIENTVERSION_ERROR",
-      `The URL ${rpcUrl} is not a Web3 node or is not reachable. Please check the endpoint.`,
-      e
+      `The URL ${rpcUrl} is not a Web3 node or is not reachable. Please check the endpoint.`
     );
   } finally {
     rpc.destroy();
@@ -165,8 +164,7 @@ async function getFHEVMRelayerMetadata(rpcUrl: string) {
   } catch (e) {
     throwFhevmError(
       "FHEVM_RELAYER_METADATA_ERROR",
-      `The URL ${rpcUrl} is not a FHEVM Hardhat node or is not reachable. Please check the endpoint.`,
-      e
+      `The URL ${rpcUrl} is not a FHEVM Hardhat node or is not reachable. Please check the endpoint.`
     );
   } finally {
     rpc.destroy();
